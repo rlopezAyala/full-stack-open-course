@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full Stack Open — Part 0</title>
+    <meta
+      name="description"
+      content="Starter HTML template for the Full Stack Open course"
+    />
+
+    <script src="./noteDiagram.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <pre class="mermaid">
+    sequenceDiagram
+        Browser->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+        Note over Browser,Server: In this case the browser sends a new note to the server, but the server does not respond with a new HTML document. Instead, the server responds with data in JSON format with a message of new note created.
+    </pre>
+  </body>
+</html>

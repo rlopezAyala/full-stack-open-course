@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full Stack Open — Part 0</title>
+    <meta
+      name="description"
+      content="Starter HTML template for the Full Stack Open course"
+    />
+
+    <script src="./noteDiagram.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <pre class="mermaid">
+    sequenceDiagram
+        Browser->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+        Note over Browser,Server: Broser sends a new note to the server
+        Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+        Server-->>Browser: HTML Document with the list of notes
+        Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+        Server-->>Browser: CSS Stylesheet
+        Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+        Server-->>Browser: JavaScript File
+        Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+        Server-->>Browser: Data in JSON format with the new note created
+    </pre>
+  </body>
+</html>
